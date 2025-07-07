@@ -1,37 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+body {
+    font-family: var(--primary-font);
+    line-height: 1.5;
+    color: var(--primary-color);
+    background-color: var(--neutral-color);
+    height: 100%;
+}
+
 :root {
     --primary-color: #054f77;
     --neutral-color: #f0f8ff;
+    --wpp-color: #25D366;
+    --wpp-color-hover: #128C7E;
     --primary-font: "Alexandria"; 
+    --secondary-font: "Reddit Sans";
     --stylized-font: "Freehand"; 
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
 
-#main-header{
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+p{
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1rem;
 }
 
 
 #main-header{
-    background-color: var(--primary-color);
+    background-color: var(--neutral-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
     gap: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content{
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
 }
 
 .company-name {
     font-family: var(--primary-font);
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--neutral-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
 }
 
 .company-subname {
-    font-family: var(--stylized-font);
+    font-family: var(--stylized-font), cursive;
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: normal;
+    color: var(--primary-color);
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-family: var(--primary-font);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--neutral-color);
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+.page-section{
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.section-content {
+    width: 100%;
+    max-width: 800px;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.section-title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+
+#s-home {
+    width: 100%;
+    height: 100vh;
+    background-image: url('assets/home-background.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: var(--neutral-color);
+    background-color: #e0f2f7;
+}
+
+.s-home-text-button-block {
+    min-width: 350px;
+    max-width: 600px;
+    text-align: center;
+    color: inherit;
+    padding: 1rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.s-home-text-button-block h1{
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: inherit;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.s-home-text-button-block p{
+    font-size: 1.2rem;
+    color: inherit;
+    margin-bottom: 1.5rem;
+}
+
+.about-section {
+    background-color:#f0f0f0;
+}
+
+.about-section .section-title{
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.about-section p{
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.contact-section {
+    background-color: #d0e0f0;
     color: var(--neutral-color);
 }
+
+.contact-section .section-title {
+    color: var(--neutral-color);
+    margin-bottom: 1rem;
+}
+
+.contact-section contact-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-section .btn-wpp{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--wpp-color);
+    color: var(--neutral-color);
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--secondary-font), sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section .btn-whatsapp:hover {
+    background-color: var(--wpp-color-hover);
+}
+
+.contact-section .btn-whatsapp .whatsapp-icon {
+    width: 24px; 
+    height: 24px;
+    fill: var(--neutral-color);
+}
+
+#main-footer {
+    background-color: var(--primary-color);
+    color: var(--neutral-color);
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+#main-footer p {
+    margin-bottom: 0.5rem;
+    color: inherit; 
+}
+
+#main-footer small {
+    display: block;
+    margin-top: 0.5rem;
+    color: inherit;
+}
+
+#main-footer a {
+    color: var(--neutral-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+#main-footer a:hover {
+    color: var(--wpp-color); 
+    text-decoration: underline;
+}
+
+
