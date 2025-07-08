@@ -21,6 +21,9 @@ body {
 :root {
     --primary-color: #054f77;
     --neutral-color: #f0f8ff;
+    --secondary-color: #1d1e1f;
+    --accent-color: #ffd500; 
+    --accent-color-hover: #ffb700;
     --wpp-color: #25D366;
     --wpp-color-hover: #128C7E;
     --primary-font: "Alexandria"; 
@@ -69,14 +72,14 @@ p{
 
 .company-name {
     font-family: var(--primary-font);
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 900;
     color: var(--primary-color);
 }
 
 .company-subname {
     font-family: var(--stylized-font), cursive;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: normal;
     color: var(--primary-color);
 }
@@ -144,6 +147,7 @@ p{
     position: relative;
     overflow: hidden;
     color: var(--neutral-color);
+    gap: 1rem;
 }
 
 .s-home-text-button-block {
@@ -156,21 +160,64 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    
 }
 
 .s-home-text-button-block h1{
-    font-size: 3.5rem;
-    font-weight: 900;
+    font-size: 4rem;
+    font-weight: 500;
     color: inherit;
     margin-bottom: 0.5rem;
     line-height: 1.1;
 }
 
 .s-home-text-button-block p{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: inherit;
-    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.s-home-text-cname{
+    font-family: var(--primary-font), sans-serif;
+    font-size: 6rem;
+    font-weight: 900;
+    color: var(--neutral-color);
+    margin-bottom: 0.5rem;
+}
+
+.s-home-text-csubname{
+    font-family: var(--stylized-font), cursive;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: var(--neutral-color);
+    margin-bottom: 1rem;
+}
+
+
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--secondary-font), sans-serif;
+    font-weight: 800;
+    border: none;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-cta {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    padding: 0.8rem 1.5rem;
+}
+
+.btn-cta:hover {
+    background-color: var(--accent-color-hover);
+    color: var(--neutral-color);
+    transform: translateY(-2px);
 }
 
 .about-section {
@@ -216,11 +263,11 @@ p{
     transition: background-color 0.3s ease;
 }
 
-.contact-section .btn-whatsapp:hover {
+.contact-section .btn-wpp:hover {
     background-color: var(--wpp-color-hover);
 }
 
-.contact-section .btn-whatsapp .whatsapp-icon {
+.contact-section .btn-wpp .wpp-icon {
     width: 24px; 
     height: 24px;
     fill: var(--neutral-color);

@@ -3,7 +3,9 @@
             //     <p class="section-description">Sua solução em produtos de Limpeza e Higiene.</p>
             //     <a href="#s-contact" class="btn btn-primary">Fale Conosco</a>
     const homeContent = {
-        title: "Bem-vindo à Maxlimp Rio",
+        title: "Bem-vindo à ",
+        stilizedCName: "Maxlimp",
+        stilizedCSubname: "Rio",
         description: "Sua solução em produtos de Limpeza e Higiene.",
         buttonText: "FALE COM UM VENDEDOR",
         buttonLink: "#s-contact" 
@@ -17,7 +19,18 @@
 
         const titleElement = $("<h1>");
         titleElement.text(homeContent.title);
+        
+        const titleElementmainName = $("<span>");
+        titleElementmainName.addClass("s-home-text-cname");
+        titleElementmainName.text(homeContent.stilizedCName);
+        
+        const titleElementsubName = $("<small>");
+        titleElementsubName.addClass("s-home-text-csubname");
+        titleElementsubName.text(homeContent.stilizedCSubname);
 
+        titleElement.append(titleElementmainName);
+        titleElement.append(titleElementsubName);
+        
         const descriptionElement = $('<p>');
         descriptionElement.text(homeContent.description);
 
